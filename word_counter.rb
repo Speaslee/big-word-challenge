@@ -1,15 +1,23 @@
 class WordCounter
   # Your code goes here
-  attr_accessor :word_length, :dictionary
-  def initialize length, where
-    word_length = length
-    words= where
+
+  def initialize l, where
+    @length = l
+    @words= where
+    @count=0
   end
 
+  def word_length
+    @length
+  end
 
   def count_of_words_matching_length
-    a = dictionary.select {|word| word.length? == wc}
-   a.count
+  @words.each do |word|
+    if word.length == @length
+      @count+=1
+    end
+  end
+  return @count
   end
 
 end
