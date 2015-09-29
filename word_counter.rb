@@ -1,8 +1,8 @@
 class WordCounter
   # Your code goes here
   attr_accessor :word_length, :dictionary
-  def initialize word_length, where
-    word_length = 5
+  def initialize length, where
+    word_length = length
     words= where
   end
 
